@@ -83,12 +83,12 @@ function Car() {
     car.add(cabin);
 
 
-    // const glass = Glass();
-    // glass.position.x = -14;
-    // car.add(glass);
-    // const glass_two = Glass();
-    // glass_two.position.x = 0;
-    // car.add(glass_two);
+    const glass = Glass();
+    glass.position.x = -14;
+    car.add(glass);
+    const glass_two = Glass();
+    glass_two.position.x = 0;
+    car.add(glass_two);
 
     return car;
 }
@@ -124,10 +124,10 @@ function Truck() {
     truck.add(chain);
     chain.position.x = 20;
     chain.position.z = 8;
-    const truckFrontTexture = getTruckFrontTexture();
-    const truckBackTexture = getTruckFrontTexture();
-    const truckRightSideTexture = getTruckSideTexture();
-    const truckLeftSideTexture = getTruckSideTexture();
+    // const truckFrontTexture = getTruckFrontTexture();
+    // const truckBackTexture = getTruckFrontTexture();
+    // const truckRightSideTexture = getTruckSideTexture();
+    // const truckLeftSideTexture = getTruckSideTexture();
 
     const front = new THREE.Mesh(
         new THREE.BoxBufferGeometry(20, 30, 25), [
