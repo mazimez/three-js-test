@@ -124,21 +124,21 @@ function Truck() {
     truck.add(chain);
     chain.position.x = 20;
     chain.position.z = 8;
-    // const truckFrontTexture = getTruckFrontTexture();
-    // const truckBackTexture = getTruckFrontTexture();
-    // const truckRightSideTexture = getTruckSideTexture();
-    // const truckLeftSideTexture = getTruckSideTexture();
+    const truckFrontTexture = getTruckFrontTexture();
+    const truckBackTexture = getTruckFrontTexture();
+    const truckRightSideTexture = getTruckSideTexture();
+    const truckLeftSideTexture = getTruckSideTexture();
 
-    const front = new THREE.Mesh(
-        new THREE.BoxBufferGeometry(20, 30, 25), [
-            new THREE.MeshLambertMaterial({ map: truckFrontTexture }),
-            new THREE.MeshLambertMaterial({ map: truckBackTexture }),
-            new THREE.MeshLambertMaterial({ map: truckLeftSideTexture }),
-            new THREE.MeshLambertMaterial({ map: truckRightSideTexture }),
-            new THREE.MeshLambertMaterial({ color: "#E4DB3F" }), //top
-            new THREE.MeshLambertMaterial({ color: 0xFFFFFF }), //bottom
-        ]
-    );
+    // const front = new THREE.Mesh(
+    //     new THREE.BoxBufferGeometry(20, 30, 25), [
+    //         new THREE.MeshLambertMaterial({ map: truckFrontTexture }),
+    //         new THREE.MeshLambertMaterial({ map: truckBackTexture }),
+    //         new THREE.MeshLambertMaterial({ map: truckLeftSideTexture }),
+    //         new THREE.MeshLambertMaterial({ map: truckRightSideTexture }),
+    //         new THREE.MeshLambertMaterial({ color: "#E4DB3F" }), //top
+    //         new THREE.MeshLambertMaterial({ color: 0xFFFFFF }), //bottom
+    //     ]
+    // );
 
     front.position.x = 30;
     front.position.z = 20;
@@ -222,11 +222,11 @@ function getTruckSideTexture() {
     canvas.height = 32;
     const context = canvas.getContext("2d");
 
-    context.fillStyle = "#E4DB3F";
-    context.fillRect(0, 0, 128, 32);
+    // context.fillStyle = "#E4DB3F";
+    // context.fillRect(0, 0, 128, 32);
 
-    context.fillStyle = "#383313";
-    context.fillRect(32, 5, 32, 10);
+    // context.fillStyle = "#383313";
+    // context.fillRect(32, 5, 32, 10);
     // context.fillRect(58, 8, 60, 24);
 
     return new THREE.CanvasTexture(canvas);
