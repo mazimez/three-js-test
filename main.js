@@ -129,16 +129,16 @@ function Truck() {
     const truckRightSideTexture = getTruckSideTexture();
     const truckLeftSideTexture = getTruckSideTexture();
 
-    // const front = new THREE.Mesh(
-    //     new THREE.BoxBufferGeometry(20, 30, 25), [
-    //         new THREE.MeshLambertMaterial({ map: truckFrontTexture }),
-    //         new THREE.MeshLambertMaterial({ map: truckBackTexture }),
-    //         new THREE.MeshLambertMaterial({ map: truckLeftSideTexture }),
-    //         new THREE.MeshLambertMaterial({ map: truckRightSideTexture }),
-    //         new THREE.MeshLambertMaterial({ color: "#E4DB3F" }), //top
-    //         new THREE.MeshLambertMaterial({ color: 0xFFFFFF }), //bottom
-    //     ]
-    // );
+    const front = new THREE.Mesh(
+        new THREE.BoxBufferGeometry(20, 30, 25), [
+            new THREE.MeshLambertMaterial({ map: truckFrontTexture }),
+            new THREE.MeshLambertMaterial({ map: truckBackTexture }),
+            new THREE.MeshLambertMaterial({ map: truckLeftSideTexture }),
+            new THREE.MeshLambertMaterial({ map: truckRightSideTexture }),
+            new THREE.MeshLambertMaterial({ color: "#E4DB3F" }), //top
+            new THREE.MeshLambertMaterial({ color: 0xFFFFFF }), //bottom
+        ]
+    );
 
     front.position.x = 30;
     front.position.z = 20;
@@ -147,14 +147,14 @@ function Truck() {
     return truck;
 }
 
-// function Wheel() {
-//     const wheel = new THREE.Mesh(
-//         new THREE.BoxBufferGeometry(12, 33, 12),
-//         new THREE.MeshLambertMaterial({ color: 0x333333 })
-//     );
-//     wheel.position.z = 6;
-//     return wheel;
-// }
+function Wheel() {
+    const wheel = new THREE.Mesh(
+        new THREE.BoxBufferGeometry(12, 33, 12),
+        new THREE.MeshLambertMaterial({ color: 0x333333 })
+    );
+    wheel.position.z = 6;
+    return wheel;
+}
 
 function Glass() {
     const glass = new THREE.Mesh(
@@ -169,52 +169,52 @@ function pickRandom(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
-// function getCarFrontTexture() {
-//     const canvas = document.createElement("canvas");
-//     canvas.width = 64;
-//     canvas.height = 32;
-//     const context = canvas.getContext("2d");
+function getCarFrontTexture() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 64;
+    canvas.height = 32;
+    const context = canvas.getContext("2d");
 
-//     context.fillStyle = "#ffffff";
-//     context.fillRect(0, 0, 64, 32);
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, 64, 32);
 
-//     context.fillStyle = "#666666";
-//     context.fillRect(8, 8, 48, 24);
+    context.fillStyle = "#666666";
+    context.fillRect(8, 8, 48, 24);
 
-//     return new THREE.CanvasTexture(canvas);
+    return new THREE.CanvasTexture(canvas);
 
-// }
+}
 
-// function getCarSideTexture() {
-//     const canvas = document.createElement("canvas");
-//     canvas.width = 128;
-//     canvas.height = 32;
-//     const context = canvas.getContext("2d");
+function getCarSideTexture() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 128;
+    canvas.height = 32;
+    const context = canvas.getContext("2d");
 
-//     context.fillStyle = "#ffffff";
-//     context.fillRect(0, 0, 128, 32);
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, 128, 32);
 
-//     context.fillStyle = "#666666";
-//     context.fillRect(10, 8, 38, 24);
-//     context.fillRect(58, 8, 60, 24);
+    context.fillStyle = "#666666";
+    context.fillRect(10, 8, 38, 24);
+    context.fillRect(58, 8, 60, 24);
 
-//     return new THREE.CanvasTexture(canvas);
-// }
+    return new THREE.CanvasTexture(canvas);
+}
 
-// function getTruckFrontTexture() {
-//     const canvas = document.createElement("canvas");
-//     canvas.width = 64;
-//     canvas.height = 32;
-//     const context = canvas.getContext("2d");
+function getTruckFrontTexture() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 64;
+    canvas.height = 32;
+    const context = canvas.getContext("2d");
 
-//     context.fillStyle = "#E4DB3F";
-//     context.fillRect(0, 0, 64, 32);
+    context.fillStyle = "#E4DB3F";
+    context.fillRect(0, 0, 64, 32);
 
-//     context.fillStyle = "#383313";
-//     context.fillRect(10, 0, 20, 32);
+    context.fillStyle = "#383313";
+    context.fillRect(10, 0, 20, 32);
 
-//     return new THREE.CanvasTexture(canvas);
-// }
+    return new THREE.CanvasTexture(canvas);
+}
 
 function getTruckSideTexture() {
     const canvas = document.createElement("canvas");
@@ -222,12 +222,12 @@ function getTruckSideTexture() {
     canvas.height = 32;
     const context = canvas.getContext("2d");
 
-    // context.fillStyle = "#E4DB3F";
-    // context.fillRect(0, 0, 128, 32);
+    context.fillStyle = "#E4DB3F";
+    context.fillRect(0, 0, 128, 32);
 
-    // context.fillStyle = "#383313";
-    // context.fillRect(32, 5, 32, 10);
-    // context.fillRect(58, 8, 60, 24);
+    context.fillStyle = "#383313";
+    context.fillRect(32, 5, 32, 10);
+    context.fillRect(58, 8, 60, 24);
 
     return new THREE.CanvasTexture(canvas);
 }
