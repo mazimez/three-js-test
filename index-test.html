@@ -30,11 +30,11 @@
         renderer.setClearColor("#e5e5e5");
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement)
-        // window.addEventListener('resize', () => {
-        //     renderer.setSize(window.innerWidth, window.innerHeight);
-        //     camera.aspect = window.innerWidth / window.innerHeight;
-        //     camera.updateProjectionMatrix();
-        // })
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        })
 
         var raycaster = new THREE.Raycaster();
         var mouse = new THREE.Vector2();
@@ -57,10 +57,10 @@
         var light = new THREE.PointLight(0xFFFFFF, 1, 500);
         light.position.set(10, 0, 25);
         scene.add(light)
-        var render = function() {
-            requestAnimationFrame(render);
-            renderer.render(scene, camera)
-        }
+        // var render = function() {
+        //     requestAnimationFrame(render);
+        //     renderer.render(scene, camera)
+        // }
 
         function onMouseMove(event) {
             event.preventDefault();
@@ -92,7 +92,7 @@
         }
         render();
 
-        window.addEventListener('mousemove', onMouseMove)
+        // window.addEventListener('mousemove', onMouseMove)
     </script>
 </body>
 
