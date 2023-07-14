@@ -57,15 +57,15 @@ function Car() {
     main.position.z = 12;
     car.add(main);
 
-    // const carFrontTexture = getCarFrontTexture();
-    // carFrontTexture.center = new THREE.Vector2(0.5, 0.5);
-    // carFrontTexture.rotation = Math.PI / 2;
-    // const carBackTexture = getCarFrontTexture();
-    // carFrontTexture.center = new THREE.Vector2(0.5, 0.5);
-    // carFrontTexture.rotation = -Math.PI / 2
-    // const carRightSideTexture = getCarSideTexture();
-    // const carLeftSideTexture = getCarSideTexture();
-    // carLeftSideTexture.flipY = false;
+    const carFrontTexture = getCarFrontTexture();
+    carFrontTexture.center = new THREE.Vector2(0.5, 0.5);
+    carFrontTexture.rotation = Math.PI / 2;
+    const carBackTexture = getCarFrontTexture();
+    carFrontTexture.center = new THREE.Vector2(0.5, 0.5);
+    carFrontTexture.rotation = -Math.PI / 2
+    const carRightSideTexture = getCarSideTexture();
+    const carLeftSideTexture = getCarSideTexture();
+    carLeftSideTexture.flipY = false;
 
 
     const cabin = new THREE.Mesh(
@@ -173,13 +173,13 @@ function getCarFrontTexture() {
     const canvas = document.createElement("canvas");
     canvas.width = 64;
     canvas.height = 32;
-    // const context = canvas.getContext("2d");
+    const context = canvas.getContext("2d");
 
-    // context.fillStyle = "#ffffff";
-    // context.fillRect(0, 0, 64, 32);
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, 64, 32);
 
-    // context.fillStyle = "#666666";
-    // context.fillRect(8, 8, 48, 24);
+    context.fillStyle = "#666666";
+    context.fillRect(8, 8, 48, 24);
 
     return new THREE.CanvasTexture(canvas);
 
